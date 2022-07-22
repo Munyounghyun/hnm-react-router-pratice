@@ -1,0 +1,111 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+/*login_wrap*/
+.login_wrap{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.login_box{
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login_box input{
+    padding: 5px 0;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    width: 250px;
+}
+.login_text{
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+}
+.login_btn_div{
+    margin: 10px 0;
+}
+.login_btn_div button{
+    border: none;
+    background-color: #3884e7;
+    color: white;
+    border-radius: 5px;
+    width: 250px;
+    height: 35px;
+}
+.login_btn_div button:hover{
+    background-color: #136cdf;
+}
+.login_bottom{
+    width: 250px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+.login_bottom p{
+    margin-top: 5px;
+    padding: 0 3px;
+    cursor: pointer;
+}
+.login_bottom span{
+    margin-top: 4px;
+    padding: 0 3px;
+}
+
+.find_id_pw{
+    display: flex;
+}
+
+
+
+/*navbar*/
+.login-button{
+    
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px 100px 0;
+    cursor: pointer;
+}
+.nav-section{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-area{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.menu-list{
+    display: flex;
+}
+.menu-list li{
+    padding:10px;
+}
+
+
+.search-input{
+    position: absolute;
+    right: 100px;
+    height: 30px;
+    border-bottom: 1px solid black;
+}
+.search-input input{
+    border: none;
+    outline: none;
+}
+
+/*productcard*/
+.ProductCard:hover{
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+}
+
+

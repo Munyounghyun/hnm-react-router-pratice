@@ -3,6 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import ProductAll from "./page/ProductAll";
 import Login from "./page/Login";
 import ProductDetail from "./page/ProductDetail";
+import Navbar from "./component/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
 
 //1. 전체 상품페이지 , 로그인 , 상품 상세 페이지
 //1-1. 네비게이션바
@@ -16,7 +19,8 @@ import ProductDetail from "./page/ProductDetail";
 //9. 상품을 검색할 수 있다.
 
 function App() {
-  const PrivateRouter = () => {};
+  //true면 로그인됨 false면 로그인이 안됨
+  const [authenticate, setAuthenticate] = useState(false);
 
   return (
     <div>
