@@ -103,9 +103,25 @@
 }
 
 /*productcard*/
-.ProductCard:hover{
+.productCard{
+    cursor: pointer;
+}
+.productCard:hover{
     transform: scale(1.03);
     transition: all 0.3s ease-in-out;
 }
 
 
+/*detail_product*/
+.detail_product{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.clothes_img{
+    margin: 0 30px;
+}
+
+select{
+    width: 80px;
+}

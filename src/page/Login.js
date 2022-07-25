@@ -1,10 +1,15 @@
 import React from "react";
 import { Form, Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({ setAuthenticate }) => {
+  const navigate = useNavigate();
+
   const loginUser = (event) => {
     event.preventDefault();
     console.log("login user");
+    setAuthenticate(true);
+    navigate("/");
   };
 
   return (
@@ -16,7 +21,7 @@ const Login = () => {
             <input placeholder="아이디"></input>
           </div>
           <div className="login_text">
-            <input placeholder="비밀번호"></input>
+            <input type="password" placeholder="비밀번호"></input>
           </div>
           <div className="login_btn_div">
             <button type="submit">로그인</button>
