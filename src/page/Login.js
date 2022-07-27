@@ -8,7 +8,6 @@ const Login = ({ setAuthenticate }) => {
 
   const loginUser = (event) => {
     event.preventDefault();
-    console.log("login user");
     setAuthenticate(true);
     navigate("/");
   };

@@ -176,3 +176,9 @@ select{
 .non_product_item:last-child{
     margin-top: 10px;
 }
+
+.loading_spanner{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
