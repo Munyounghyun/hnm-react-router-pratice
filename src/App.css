@@ -66,11 +66,20 @@
 
 
 /*navbar*/
-.login-button{
-    
+.navbar_wrap{
     display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.nav_box{
+    width: 1500px;
+    min-width: 1200px;
+}
+.login-button{
+    display: flex;
+    align-items: center;
     justify-content: flex-end;
-    margin: 30px 100px 0;
+    margin: 50px 120px 0;
     cursor: pointer;
 }
 .nav-section{
@@ -85,14 +94,17 @@
 }
 .menu-list{
     display: flex;
+    margin-left: 100px;
+    justify-content: center;
 }
 .menu-list li{
     padding:10px;
+    height: 44px;
 }
 
 
 .search-input{
-    position: absolute;
+    margin-left: 100px;
     right: 100px;
     height: 30px;
     border-bottom: 1px solid black;
@@ -123,5 +135,43 @@
 }
 
 select{
-    width: 80px;
+    width: 200px;
+    
+}
+
+.clothes_detail{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 0 50px;
+}
+.clothes_detail select{
+    margin: 15px 0;
+}
+.clothes_detail button{
+    height: 30px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #3884e7;
+    width: 200px;
+    margin: 10px 0;
+}
+.clothes_detail button:hover{
+    background-color: #136cdf;
+}
+
+
+.non_product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.non_product_item{
+    margin-top: 30px;
+    margin-bottom: 0;
+    width: 800px;
+    color: gray;
+}
+.non_product_item:last-child{
+    margin-top: 10px;
 }

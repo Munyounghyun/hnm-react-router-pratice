@@ -3,6 +3,7 @@ import { Form, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const Login = ({ setAuthenticate }) => {
+  setAuthenticate(false);
   const navigate = useNavigate();
 
   const loginUser = (event) => {

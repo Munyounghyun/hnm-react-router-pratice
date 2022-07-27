@@ -22,13 +22,11 @@ function App() {
   //true면 로그인됨 false면 로그인이 안됨
   const [authenticate, setAuthenticate] = useState(false);
 
-  useEffect(() => {
-    console.log("Aaaaa", authenticate);
-  }, [authenticate]);
+  useEffect(() => {}, [authenticate]);
 
   return (
     <div>
-      <Navbar />
+      <Navbar authenticate={authenticate} />
       <Routes>
         <Route path="/" element={<ProductAll />} />
         <Route
