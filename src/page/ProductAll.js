@@ -3,21 +3,22 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
 import ProductCard from "../component/ProductCard";
 import ClipLoader from "react-spinners/ClipLoader";
+import { productAction } from "../redux/actions/productAction";
+import { useDispatch } from "react-redux/es/exports";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
 const ProductAll = () => {
-  const [loading, setLoading] = useState(false);
-  const [productList, setProductList] = useState([]);
-  const [query, setQuery] = useSearchParams();
+  const productList = useSelector((state) => state.product.productList);
+  //const productList = useSelector((state) => state.productList); 오류 => reducer에 저장되어있는 키값에 접근해야함
 
-  const getProducts = async () => {
+  const loading = useSelector((state) => state.product.loading);
+  const [query, setQuery] = useSearchParams();
+  const dispatch = useDispatch();
+
+  const getProducts = () => {
     let searchQuery = query.get("q") || "";
-    let url = `https://my-json-server.typicode.com/Munyounghyun/hnm-react-router-pratice
-    /products?q=${searchQuery}`;
-    setLoading(true); //스피너 보임
-    let response = await fetch(url);
-    let data = await response.json();
-    setProductList(data);
-    setLoading(false); //값들고오면 스피너 사라짐
+    //searchQuery를 미들웨어로 전달시키는방법 = 매개변수로 보내줌
+    dispatch(productAction.getProducts(searchQuery));
   };
 
   useEffect(() => {

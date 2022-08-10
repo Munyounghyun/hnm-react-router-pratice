@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import { productAction } from "../redux/actions/productAction";
+import { useSelector } from "react-redux/es/exports";
 
 const ProductDetail = () => {
+  const product = useSelector((state) => state.product.productList);
   let { id } = useParams();
-  const [product, setProduct] = useState(null);
-
-  const getProductDetail = async () => {
-    let url = `https://my-json-server.typicode.com/Munyounghyun/hnm-react-router-pratice
-    /products/${id}`;
-    let response = await fetch(url);
-    let data = await response.json();
-    setProduct(data);
+  const dispatch = useDispatch();
+  const getProductDetail = () => {
+    dispatch(productAction.getProductDetail(id));
   };
 
   useEffect(() => {
