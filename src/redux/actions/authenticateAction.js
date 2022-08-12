@@ -1,14 +1,16 @@
+import { authLogin } from "../reducers/authenticateReducer";
+
 function login(id, password) {
   return (dispatch, getState) => {
-    console.log("로그인 성공");
-    dispatch({ type: "LOGIN_SUCCESS", payload: { id, password } });
+    //dispatch({ type: "LOGIN_SUCCESS", payload: { id, password } });
+    dispatch(authLogin.login({ id, password }));
   };
 }
 
 function logout() {
   return (dispatch, getState) => {
-    console.log("로그아웃 성공");
-    dispatch({ type: "LOGOUT_SUCCESS" });
+    //dispatch({ type: "LOGOUT_SUCCESS" });
+    dispatch(authLogin.logout());
   };
 }
 export const authenticateAction = { login, logout };

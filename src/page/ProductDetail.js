@@ -9,7 +9,7 @@ const ProductDetail = () => {
   console.log(product);
   let { id } = useParams();
   const dispatch = useDispatch();
-  const getProductDetail = async () => {
+  const getProductDetail = () => {
     dispatch(productAction.getProductDetail(id));
   };
 
