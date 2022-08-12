@@ -5,10 +5,11 @@ import { productAction } from "../redux/actions/productAction";
 import { useSelector } from "react-redux/es/exports";
 
 const ProductDetail = () => {
-  const product = useSelector((state) => state.product.productList);
+  const product = useSelector((state) => state.product.selectedItem);
+  console.log(product);
   let { id } = useParams();
   const dispatch = useDispatch();
-  const getProductDetail = () => {
+  const getProductDetail = async () => {
     dispatch(productAction.getProductDetail(id));
   };
 

@@ -1,6 +1,7 @@
 let initialState = {
   loading: true,
   productList: [],
+  selectedItem: null,
 };
 
 function productReducer(state = initialState, action) {
@@ -9,7 +10,7 @@ function productReducer(state = initialState, action) {
     case "GET_PRODUCT_SUCCESS":
       return { ...state, productList: payload.data, loading: false };
     case "GET_PRODUCT_DETAIL":
-      return { ...state, productList: payload.data, loading: false };
+      return { ...state, selectedItem: payload.data, loading: false };
     default:
       return { ...state };
   }
